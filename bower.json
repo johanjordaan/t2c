@@ -1,9 +1,10 @@
 {
   "name": "t2c",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Simple coffee script template engine - text2code",
   "author": "Johan Jordaan",
   "license": "MIT",
+  "main":"dist/t2c.min.js",
   "ignore": [
     "**/.*",
     "src",
