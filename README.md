@@ -22,39 +22,39 @@ t2c generates code which you include in your peoject. You then use this code to 
 PS: Have a look at grunt-t2c for a grunt task that does step 2 as a grun task. 
 
 Here is a template example:
-`
+```
 surnames = ['Jordaan','Smith']
 for surname in surnames 
   #| Hallo from  #{ctx.name} surname
-`
+```
 All indentation after the escape string `#| ` is emitted in the final template. All spaces/tabs before the escape string is relevant in the context of the code.
 
 This will produce the following coffee script:
-`
+```
 template = (ctx) ->
   output = ''
   surnames = ['Jordaan','Smith']
   for surname in surnames 
     output += "Hallo from  #{ctx.name} #{surname}\n"
 module.exports = template
-`
+```
 
 You can then use this template in you own code like this:
-`
+```
 template = require './template'
 context = {name:'johan'}
 result = template.template(context)
-`
+```
 
 To use t2c directly in your own code :
-`
+```
 coffee = 
 t2c = require 't2c'
 cs = t2c.compile template_string 
 js = coffee.compile(cs,{bare:true})
 eval(js)
 result = template(context)  
-`
+```
 
 
 
