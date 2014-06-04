@@ -18,7 +18,7 @@ t2c =
         indent_offset = line.indexOf(emit_char)
         indent = line.substring(0,indent_offset)
         text = trimmed_line.substring(emit_char.length)
-        fragments.push  "  #{indent}"+'output += "'+"#{text}"+'\n"'
+        fragments.push  "  #{indent}"+'output += "'+"#{text}"+'\\n"'
       else
         fragments.push "  #{line}"
     fragments.push "module.exports = template"    
