@@ -1,7 +1,7 @@
 t2c  ![Travis CI Status](https://api.travis-ci.org/johanjordaan/t2c.svg?branch=master "Travis CI Status")
 =========
 
-This is a very simple templating engine. It is diffrent from other templating engines since it prodices code which will produce the output. It is further code centric and the text to be emitted is escaped, not the code. I believe this produces better looking template output.
+This is a very simple templating engine. It is diffrent from other templating engines since it produces code which will produce the output. It is further code centric and the text to be emitted is escaped, not the code. I believe this produces better looking template output.
 
 Install
 =========
@@ -14,7 +14,7 @@ or
 
 Usage
 =========
-t2c generates code which you include in your peoject. You then use this code to generate output based on a context. Thw workflow followis the folling progression : 
+t2c generates code which you include in your project. You then use this code to generate output based on a context. Thw workflow followis the folling progression : 
 * Create a template.t2c file that contains the template and code.
 * Compile the template.t2c to template.coffee using the t2c code.
 * Compile the teample.coffee file to template.js.
